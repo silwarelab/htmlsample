@@ -35,12 +35,8 @@ body {
     margin-right: 60px; /* Increase the spacing to 30px */
     padding: 20px 20px 20px 20px;
   }
-  @media only screen and (max-width: 768px) { /* Adjust breakpoint as needed */
-    nav ul li {
-      margin: 10px; /* Hide menu items */
-    }
-  
-  }
+ 
+
  nav ul li a {
     text-decoration: none;
     color: #333;
@@ -49,7 +45,19 @@ body {
     display: none;
    
   }
+  
+ 
   @media only screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+    nav ul li {
+      display: none; /* Hide menu items */
+    }
+  
+    nav ul li.menu-toggle {
+      display: block;
+     
+    }
+  }
+  @media only screen and (max-width: 480px) { /* Adjust breakpoint as needed */
     nav ul li {
       display: none; /* Hide menu items */
     }
@@ -89,6 +97,15 @@ body {
       
     }
   }
+  @media only screen and (max-width: 480px) { 
+    .hero{
+      padding:30px;}/* Adjust breakpoint as needed */
+    .hero-content {
+      font-size:large; 
+      width: 80%;
+      
+    }
+  }
   .hero-content p {
     margin-bottom: 80px;
      font-size: 22px; /* Adjust the font size as needed */
@@ -98,11 +115,16 @@ body {
       font-size:small; 
     }
   }
+  @media only screen and (max-width: 480px) { /* Adjust breakpoint as needed */
+    .hero-content p {
+      font-size:small; 
+    }
+  }
   .image-paragraph-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     background: linear-gradient(to bottom,#afdce8 ,#bc907a);
     margin-top:10px;
     height: 600px;
@@ -110,17 +132,19 @@ body {
   }
   
   .image-container {
-    width: 50%;
+    
    text-align: center;
    margin-top: 80px;
    margin-left: 100px;
   }
-  
+ 
   .paragraph-container {
-    width:50%;
-    margin-right: 100px;
-    margin-bottom: 0px;
+    width:70%;
+     margin-bottom: 0px;
     font-size: large;
+  }
+  .paragraph-container p{
+    font-size:16px;
   }
   .play_it{
     margin-top: 40px;
@@ -133,27 +157,49 @@ body {
       
     }
     .image-container {
-      width: 100%;
       margin-left: 40px; 
-      margin-top:20px;/* Make image full width on mobile */
+      margin-top:20px;
+  
+     /* Make image full width on mobile */
     }
     .paragraph-container{
         font-size: medium;
-        width:100%;
-        margin-left:100px;
+        width:70%;
+        height:60%;
+        margin-left:10px;
     }
     .play_it img {
-        width: 150px; /* Even smaller for very small screens */
+        width: 120px; /* Even smaller for very small screens */
       }
     }
+    @media only screen and (max-width: 480px) { /* Adjust breakpoint as needed */
+      .image-paragraph-section {
+        flex-direction: column;
+        height:1200px;
+        
+      }
+      .image-container {
+    
+        margin-left: 10px; 
+        margin-top:20px;
+      }
+      .paragraph-container{
+          font-size: small;
+          width:70;
+          margin-left:10px;
+      }
+      .play_it img {
+          width: 150px; /* Even smaller for very small screens */
+        }
+      }
+  
+
     .card-container {
+     
       text-align: center;
       margin: 10px 0;
       padding: 20px;
       background-color:#afdce8;
-     
-      
-    
     }
   
     .card-grid {
@@ -167,7 +213,7 @@ body {
       border: 1px solid #ccc;
       padding-bottom: 20px;
       text-align: center;
-      background-color:#C5A07E
+      background-color:#C5A07E;
     }
   
     .card img {
@@ -175,7 +221,35 @@ body {
       max-height: 200px; /* Adjust maximum height as needed */
       object-fit: cover;
     }
-    /* ... existing CSS ... */
+    .card h3 {
+      font-size: 1.5rem; /* Adjust heading size */
+    }
+    
+    .card p {
+      font-size: 14px; /* Default font size */
+    }
+    @media (max-width: 768px) {
+    
+      .card p {
+        font-size: 0.9rem; /* Slightly smaller font size on medium devices */
+      }
+      .card img {
+        width: 100%;
+        height: 500px; /* Adjust maximum height as needed */
+        object-fit: cover;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .card p {
+        font-size: x-small; /* Even smaller font size on mobile devices */
+      }
+      .card img {
+        width: 100%;
+        height: 500px; /* Adjust maximum height as needed */
+        object-fit: cover;
+      }
+    }
 
 .footer {
   background-color:ghostwhite;
@@ -217,14 +291,20 @@ body {
   .main_title{
     font-size: x-large;
   }}
-
-  .main_para{
-    font-size:large;
-  }
+  @media (max-width: 480px) {
+    .main_title{
+      font-size: x-large;
+    }}
+  
+ 
   @media (max-width: 768px) {
     .main_para{
       font-size: medium;
     }}
+    @media (max-width: 768px) {
+      .main_para{
+        font-size: small;
+      }}
   
 /* Left column styling (paragraph and icon) */
 .text-column {
@@ -238,6 +318,10 @@ body {
 .text-column p {
   margin-bottom: 10px;
 }
+@media (max-width: 480px) {
+  .text_column p{
+    font-size: small;
+  }}
 
 /* Right column styling (image) */
 .image-column {
